@@ -1,4 +1,8 @@
 #include<stdio.h>
+/*
+조합으로 파스칼 삼각형의 줄을 구했더니 C 언어 int 범위를 넘어가 오버플로우 하였음.
+아래에 다른 방법 모색
+
 unsigned int fac(unsigned int num){
     unsigned int i,fac=1;
     for(i=1;i<=num;i++){
@@ -6,8 +10,7 @@ unsigned int fac(unsigned int num){
     }
     return fac;
 }
-/* 조합으로 파스칼 삼각형의 줄을 구했더니 C 언어 int 범위를 넘어가 오버플로우 하였음.
-
+ 
 unsigned int nCr(unsigned int n,unsigned int r){
     if(n==r || r==0){return 1;}
     return(fac(n)/(fac(r)*fac(n-r)));
