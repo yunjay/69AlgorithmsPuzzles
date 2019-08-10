@@ -1,7 +1,4 @@
 #include<stdio.h>
-/*
-조합으로 파스칼 삼각형의 줄을 구했더니 C 언어 int 범위를 넘어가 오버플로우 하였음.
-아래에 다른 방법 모색
 
 unsigned int fac(unsigned int num){
     unsigned int i,fac=1;
@@ -14,7 +11,7 @@ unsigned int fac(unsigned int num){
 unsigned int nCr(unsigned int n,unsigned int r){
     if(n==r || r==0){return 1;}
     return(fac(n)/(fac(r)*fac(n-r)));
-} */
+} 
 
 unsigned int money(unsigned int num){
     unsigned int currency[]={10000,5000,2000,1000,500 ,100,50,10,5,1};
@@ -33,7 +30,7 @@ unsigned int main(void){
 
     //동적 크기의 배열을 만들자
     unsigned int * p;
-    p = calloc(n,sizeof(int));
+    p = (unsigned int*)calloc(n,sizeof(int));
 
     //파스칼 삼각형의 n 번째 줄 저장
     
